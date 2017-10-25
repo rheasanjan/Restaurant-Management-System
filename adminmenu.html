@@ -63,7 +63,12 @@
   </div>
   <center>
     <div id="menu">
-      <button class="menubutton"> Add Employee </button>
+      <button  id = "addemp" class="menubutton"> Add Employee </button>
+      <script type="text/javascript">
+    document.getElementById("addemp").onclick = function () {
+        location.href = "addemp.html";
+    };
+</script>
       <br>
       <button class="menubutton"> Update Employee Details </button>
       <br>
