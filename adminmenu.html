@@ -1,0 +1,78 @@
+<html>
+<head>
+  <title> Admin Home page </title>
+  <style>
+  #menu {
+    width: 500px;
+    height: 500px;
+    padding: 300px 50px 50px 50px;
+  }
+  #logout {
+    float:  right;
+    padding: 10px;
+    width: 200px;
+    height:100px;
+  }
+  .logout_button {
+    width: 100px;
+    background-color: #33D034;
+    padding:6px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-style: normal;
+    font-family: sans-serif;
+    font-size: 20px;
+
+  }
+  .logout_button:hover {
+      background-color: #57BEEB;
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+  .menubutton {
+    width: 60%;
+    background-color: #33D034;
+    padding: 8px;
+    margin: 6px;
+    display: inline-block;;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    font-style: normal;
+    font-family: sans-serif;
+    font-size: 20px;
+
+  }
+
+
+.menubutton:hover {
+    background-color: #57BEEB;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+  </style>
+</head>
+<body background="adminbg.jpg">
+  <center>
+    <p style="color:black;font-size:36px;font-family:cursive"> <b> Admin Home </b> </p>
+  </center>
+  <div id="logout">
+    <button class="logout_button"> Logout </button>
+  </div>
+  <center>
+    <div id="menu">
+      <button class="menubutton"> Add Employee </button>
+      <br>
+      <button class="menubutton"> Update Employee Details </button>
+      <br>
+      <button class="menubutton"> Manage Table Bookings </button>
+      <br>
+      <button class="menubutton"> Manage Deliveries </button>
+    </div>
+
+  </center>
+
+</body>
+</html>
