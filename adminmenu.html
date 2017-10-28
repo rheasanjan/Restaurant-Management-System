@@ -56,10 +56,16 @@
 </head>
 <body background="adminbg.jpg">
   <center>
-    <p style="color:black;font-size:36px;font-family:cursive"> <b> Admin Home </b> </p>
+    <p style="color:black;font-size:36px;font-family:sans-serif"> <b> Admin Home </b> </p>
   </center>
   <div id="logout">
-    <button class="logout_button"> Logout </button>
+    <button id="lo" class="logout_button"> Logout </button>
+    <script type="text/javascript">
+  document.getElementById("lo").onclick = function () {
+      location.href = "adminlogin1.html";
+  };
+</script>
+
   </div>
   <center>
     <div id="menu">
@@ -70,7 +76,12 @@
     };
 </script>
       <br>
-      <button class="menubutton"> Update Employee Details </button>
+      <button id="update" class="menubutton"> Update Employee Details </button>
+      <script type="text/javascript">
+    document.getElementById("update").onclick = function () {
+        location.href = "update_emp.html";
+    };
+</script>
       <br>
       <button class="menubutton"> Manage Table Bookings </button>
       <br>

@@ -1,0 +1,110 @@
+<html>
+<head>
+  <title> Book a table</title>
+  <style>
+  input, select {
+      width: 80%;
+      padding: 12px 20px;
+      margin: 14px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+  }
+  input[type=submit] {
+      width: 80%;
+      background-color: red;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+      background-color: #45a049;
+  }
+  div.form {
+
+      border-radius: 7px;
+      background-color: ;
+      padding: 150px 250px 200px 200px;
+    	width:550px;
+    	height:250px;
+
+
+  }
+  .button {
+    width: 40%;
+    background-color:red;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+  }
+  .button:hover {
+      background-color: #45a049;
+  }
+p.label {
+  font-size: 20px;
+  font-family: sans-serif;
+  color: beige;
+}
+  </style>
+</head>
+
+<body background="table1.jpg">
+  <center>
+    <p style="color:beige;font-size:36px;font-family:sans-serif"> Book  A Table </p>
+  </center>
+  <center>
+  <div class="form">
+
+
+    <form action="" method="Get" name="no_of_people">
+      <p class="label"> Number of tables
+      <select id="no" name="No_of_tables" required>
+        <option value="1"> 1 </option>
+          <option value="2"> 2 </option>
+            <option value="3"> 3 </option>
+              <option value="4"> 4 </option>
+                <option value="5"> 5 </option>
+                  <option value="6"> 6 </option>
+                    <option value="7"> 7 </option>
+                      <option value="8"> 8 </option>
+                        <option value="9"> 9 </option>
+                          <option value="10"> 10 </option>
+
+              </select> </p>
+              <br>
+              <br>
+              <p class="label"> Enter the time slot
+              <select required id="time_slot" name="time_slot" >
+                  <option value="lunch1"> Lunch- 1pm </option>
+                    <option value="lunch2">Lunch- 2pm </option>
+                      <option value="lunch3"> Lunch-3pm </option>
+                        <option value="dinner1"> Dinner-7pm </option>
+                        <option value="dinner2"> Dinner-8pm </option>
+                        <option value="dinner3"> Dinner-9pm </option>
+                      </select> </p>
+                      <br>
+                      <br>
+                <p class="label"> Enter the date <br>
+                   <input type="date" name="date" required>
+                 </p>
+                <input type="submit"  Value="Book">
+              </form>
+              <button id="back" class="button"> Back </button>
+              <script type="text/javascript">
+            document.getElementById("back").onclick = function () {
+                location.href = "mainhome.html";
+            };
+            </script>
+            </div>
+          </center>
+        </body>
+        </html>
