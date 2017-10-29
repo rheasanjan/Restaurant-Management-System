@@ -1,6 +1,7 @@
 <html>
 <head>
   <title> Book a table</title>
+  <link rel="stylesheet" type="text/css" href="menu.css">
   <style>
   input, select {
       width: 80%;
@@ -58,6 +59,22 @@ p.label {
 </head>
 
 <body background="table1.jpg">
+
+  <div class="primary_nav_wrap">
+  <ul>
+    <li ><a href="mainhome.html">Home</a></li>
+    <li ><a href="menu.html">Order Online</a></li>
+    <li class="current-menu-item"><a href="book_table.html">Book a table</a> </li>
+
+
+    <li><a href="first_page.html">Logout</a></li>
+
+
+  </ul>
+</div>
+  <br>
+  <br>
+  <br>
   <center>
     <p style="color:beige;font-size:36px;font-family:sans-serif"> Book  A Table </p>
   </center>
@@ -98,12 +115,7 @@ p.label {
                  </p>
                 <input type="submit"  Value="Book">
               </form>
-              <button id="back" class="button"> Back </button>
-              <script type="text/javascript">
-            document.getElementById("back").onclick = function () {
-                location.href = "mainhome.html";
-            };
-            </script>
+              
             </div>
           </center>
         </body>
