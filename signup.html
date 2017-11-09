@@ -80,7 +80,9 @@ function validateForm() {
       <div>
         <center><p style="font-size:40px"> <b>Sign Up </b> </p>
 
-          <form action="" method="get" name="signup" onsubmit="return validateForm();">
+          <form action="" method="post" name="signup" onsubmit="return validateForm();">
+             <?php if(isset($smsg)){ ?><div class="alert alert-success" role="alert"> <?php echo $smsg; ?> </div><?php } ?>
+      <?php if(isset($fmsg)){ ?><div class="alert alert-danger" role="alert"> <?php echo $fmsg; ?> </div><?php } ?>
 
            <p class="name"> <b> First name&nbsp&nbsp&nbsp &nbsp</b><input type="text" name="Fname" placeholder="first name" required></p>
 
