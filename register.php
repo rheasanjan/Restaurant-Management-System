@@ -12,7 +12,7 @@ require('index.php');
        $email = $_POST['email'];
 
        $query = "INSERT INTO 'customer' (cust_phno, fname, lname, address, city, email, password) VALUES ('$phone', '$Fname', '$Lname', '$Address1', '$City', '$email', '$password')";
-       $result = mysqli_query($connection, $query);
+       $result = mysqli_query($con, $query);
        if($result){
            $smsg = "User Created Successfully.";
        }else{
