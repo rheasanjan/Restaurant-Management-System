@@ -7,7 +7,7 @@ $username = mysqli_real_escape_string($con,$_POST['username']);
 $password =mysqli_real_escape_string($con,$_POST['password']);
 
 
-$result = mysqli_query($con,"SELECT * FROM login WHERE username='$username' and password='$password'");
+$result = mysqli_query($con,"SELECT * FROM customer WHERE cust_phno='$username' and password='$password'");
 if(mysqli_num_rows($result) == 0) {
   $_SESSION['errMsg'] = "Invalid username or password";
   header("location:login_cust.php");
@@ -16,7 +16,9 @@ if(mysqli_num_rows($result) == 0) {
 }
 else
 
-header("location: home.php");
+$_SESSION['phone'] = $_POST['username'];
+
+header("location: mainhome.php");
 
 
 ?>

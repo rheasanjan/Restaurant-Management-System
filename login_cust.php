@@ -20,19 +20,8 @@
   </script>
   <title> Login page </title>
   <style>
-  input[type=text], select {
-      width: 50%;
-      padding: 12px 20px;
-      margin: 8px 0;
-      display: inline-block;
-      border: 2px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-  }
-     input[type=text]:focus{
-  	    border: 3px solid #555;
-  }
-  input[type=password], select {
+
+  input {
       width: 50%;
       padding: 12px 20px;
       margin: 8px 0;
@@ -42,7 +31,7 @@
       box-sizing: border-box;
 
   }
-  input[type=password]:focus {
+  input:focus {
       border: 3px solid #555;
   }
   button.login {
@@ -85,8 +74,11 @@ button.login:hover {
     border-radius: 4px;
     cursor: pointer;
   }
-  button.reg {
-    width: 100px;
+  .back:hover {
+    background-color:#57BEEB;
+  }
+  .reg {
+    width: 200px;
     background-color: #33D034;
     color: white;
     padding: 14px 20px;
@@ -95,7 +87,7 @@ button.login:hover {
     border-radius: 4px;
     cursor: pointer;
   }
-  button.reg :hover {
+  .reg:hover {
         background-color:#57BEEB;
     }
 
@@ -110,6 +102,18 @@ button.login:hover {
     <p style="font-size:50px; color:black"> <b> Restaurant Management System <b> </p>
     </center>
   <br>
+
+  <center>
+    <p style="font-size:25px;color:black"> <b> NOT REGISTERED? </b> </p>
+  <button id="reg" class="reg"> Sign up </button>
+  <script type="text/javascript">
+  document.getElementById("reg").onclick= function() {
+    location.href="signup.php";
+  };
+  </script>
+</center>
+
+
   <center>
     <div>
       <center>
@@ -122,32 +126,42 @@ button.login:hover {
         <p class="uname">  PASSWORD <input type="password" name="password" placeholder="password" ></p>
           <p>
             <button type="submit" class="login" name="Login">Login </button>
+
+
+
+
+
+
             </center>
           </p>
-          <center>
-            <p style="color:black;font-size=25px"> Not registered?
-            <button type="submit" class="reg" name="register"> Sign up </button>
-          </p>
-          </center>
+
 
         </form>
+
+
         <div id="errMsg">
                 <?php
                 if(!empty($_SESSION['errMsg'])) {
-                  echo $_SESSION['errMsg'];
-                 }
+                  echo '<script language="javascript">';
+                  echo 'alert("Invalid Username or Password")';
+                  echo '</script>';
+                }
                  ?>
             </div>
             <?php unset($_SESSION['errMsg']);
             ?>
       </div>
     </center>
+
+
     <div id="backbutton">
       <button  id="back" class="back"> Back </button>
       <script type="text/javascript">
       document.getElementById("back").onclick= function() {
         location.href="first_page.html";
       };
+
       </script>
+    </div>
   </body>
   </html>

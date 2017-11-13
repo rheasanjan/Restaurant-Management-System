@@ -62,8 +62,8 @@ p.label {
 
   <div class="primary_nav_wrap">
   <ul>
-    <li ><a href="mainhome.html">Home</a></li>
-    <li ><a href="menu.html">Order Online</a></li>
+    <li ><a href="mainhome.php">Home</a></li>
+    <li ><a href="menu.php">Order Online</a></li>
     <li class="current-menu-item"><a href="book_table.html">Book a table</a> </li>
 
 
@@ -82,24 +82,24 @@ p.label {
   <div class="form">
 
 
-    <form action="" method="Get" name="no_of_people">
-      <p class="label"> Number of tables
+    <form action="" method="post" name="no_of_people">
+      <p class="label"> Enter Table Strength
       <select id="no" name="No_of_tables" required>
-        <option value="1"> 1 </option>
+
           <option value="2"> 2 </option>
-            <option value="3"> 3 </option>
+
               <option value="4"> 4 </option>
-                <option value="5"> 5 </option>
+
                   <option value="6"> 6 </option>
-                    <option value="7"> 7 </option>
+
                       <option value="8"> 8 </option>
-                        <option value="9"> 9 </option>
+
                           <option value="10"> 10 </option>
 
               </select> </p>
               <br>
               <br>
-              <p class="label"> Enter the time slot
+              <p class="label"> Enter the time slot for today
               <select required id="time_slot" name="time_slot" >
                   <option value="lunch1"> Lunch- 1pm </option>
                     <option value="lunch2">Lunch- 2pm </option>
@@ -110,12 +110,10 @@ p.label {
                       </select> </p>
                       <br>
                       <br>
-                <p class="label"> Enter the date <br>
-                   <input type="date" name="date" required>
-                 </p>
+
                 <input type="submit"  Value="Book">
               </form>
-              
+
             </div>
           </center>
         </body>
