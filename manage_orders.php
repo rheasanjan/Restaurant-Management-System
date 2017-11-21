@@ -99,6 +99,7 @@ tr:nth-child(even)
 <br>
 <br>
 <br>
+
 <p style="font-size:25px;color: black; font-family: cursive"> Assign Employees for Delivery</p>
 
    <table style="width:80%">
@@ -155,6 +156,46 @@ tr:nth-child(even)
  </table>
 <br>
 <br>
+<?php
+
+$sql = "SELECT empid,fname,lname,status FROM employee where status='busy'";
+ $result = mysqli_query($con,$sql);
+ ?>
+ <p style="font-size:25px;color: beige; font-family: cursive"> Employees Assigned For Delivery </p>
+<table style="width:80%">
+  <thead>
+  <tr>
+    <th> Employee ID </th>
+    <th> Employee Name </th>
+    <th> Status </th>
+    <th> </th>
+  </tr>
+</thead>
+<tbody>
+  <?php
+  while( $row = mysqli_fetch_row($result)) {
+  print "<tr> <td>";
+  print "<form action=\"process_free.php\" method=\"POST\" name=\"assign\">";
+  print "<input type=text name=\"empid\" value=$row[0] readonly=\"readonly\">";
+   print "</td><td>";
+  //echo $row["empid"];
+  //print "</td><td>";
+  echo $row[1];
+  print "&nbsp";
+  echo $row[2];
+  print "</td><td>";
+  echo $row[3];
+  print "</td> <td>";
+
+  print "<input type=submit value=\"Free\" >";
+  print "</form>";
+
+  print "</td></tr>";
+}
+?>
+</tbody>
+
+</table>
 <br>
 
 <button class=button id="back"> Back </button>
