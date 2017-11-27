@@ -39,7 +39,7 @@ div.primary_nav_wrap
 }
 .primary_nav_wrap ul li.current-menu-item
 {
-  background: green;
+  background: #57BEEB;
 }
 
 .primary_nav_wrap ul li:hover

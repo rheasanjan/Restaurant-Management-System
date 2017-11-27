@@ -19,7 +19,7 @@
   background-color: #57BEEB;
 }
 div {
-  width :500px;
+  width :600px;
   height: 400px;
   padding: 150px 150px 150px 150px;
 }
@@ -29,21 +29,24 @@ p{
   </style>
 </head>
 <body background="fp.jpg">
+  <br>
+  <br>
+  <br>
   <center>
-    <p style="font-size=36px;font-family=sans-serif;color:beige"> Restaurant Management System </p>
+    <p style="font-size:36px;font-family:cursive;color:white"> Restaurant Management System </p>
   </center>
   <center>
     <div class="menu">
       <button id="admin" class="button"> I am an Admin </button>
       <script type="text/javascript">
     document.getElementById("admin").onclick = function () {
-        location.href = "adminlogin1.html";
+        location.href = "adminlogin1.php";
       };
         </script>
-      <button id="cust" class="button"> I am a customer </button>
+      <button  id="cust" class="button"> I am a customer </button>
       <script type="text/javascript">
     document.getElementById("cust").onclick = function () {
-        location.href = "login_cust.html";
+        location.href = "login_cust.php";
       };
         </script>
     </div>
